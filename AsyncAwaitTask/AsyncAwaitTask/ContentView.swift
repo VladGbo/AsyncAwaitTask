@@ -10,7 +10,10 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationStack {
-            firstSampleView
+            VStack(alignment: .leading, spacing: 20) {
+                firstSampleView
+                secondSampleView
+            }
         }.navigationTitle("List of samples")
     }
     private var firstSampleView: some View {
@@ -18,6 +21,13 @@ struct ContentView: View {
             FirstSampleView()
         } label: {
             Text("Load image with Async Await")
+        }
+    }
+    private var secondSampleView: some View {
+        NavigationLink {
+            SecondSampleView()
+        } label: {
+            Text("Load image with Task")
         }
     }
 }
