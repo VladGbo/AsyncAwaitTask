@@ -13,6 +13,7 @@ struct ContentView: View {
             VStack(alignment: .leading, spacing: 20) {
                 firstSampleView
                 secondSampleView
+                thirdSampleView
             }
         }.navigationTitle("List of samples")
     }
@@ -28,6 +29,13 @@ struct ContentView: View {
             SecondSampleView()
         } label: {
             Text("Load image with Task")
+        }
+    }
+    private var thirdSampleView: some View {
+        NavigationLink {
+            ThirdSampleView()
+        } label: {
+            Text("Load images with Async let")
         }
     }
 }
