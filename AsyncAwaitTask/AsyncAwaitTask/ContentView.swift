@@ -14,6 +14,7 @@ struct ContentView: View {
                 firstSampleView
                 secondSampleView
                 thirdSampleView
+                fourthSampleView
             }
         }.navigationTitle("List of samples")
     }
@@ -36,6 +37,13 @@ struct ContentView: View {
             ThirdSampleView()
         } label: {
             Text("Load images with Async let")
+        }
+    }
+    private var fourthSampleView: some View {
+        NavigationLink {
+            FourthSampleView()
+        } label: {
+            Text("Load images with Async Group")
         }
     }
 }
